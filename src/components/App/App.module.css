@@ -1,0 +1,79 @@
+.app {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+:root {
+  --font-family: "Rubik", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Roboto", sans-serif;
+  --font3: "Figma Hand", sans-serif;
+  --font4: "Montserrat", sans-serif;
+}
+
+a,
+button,
+input,
+input::placeholder {
+  transition-duration: 250ms;
+  transition-property: color, background-color, border, box-shadow, visibility,
+    opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button {
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  font-style: normal;
+}
+
+button {
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}

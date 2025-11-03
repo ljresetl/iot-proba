@@ -1,0 +1,325 @@
+/* Загальні */
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 35px 0 5px 0;
+}
+
+.headerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 120px;
+  position: relative;
+}
+
+/* Логотип */
+.logo {
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #000;
+  flex-shrink: 0;
+}
+
+/* Пошук */
+.searchBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.searchWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.searchInput {
+  border-radius: 50px;
+  padding: 16px 32px;
+  width: 100%;
+  background: #f1f0f0;
+  border: none;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+/* Фільтр */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 50px;
+  padding: 16px 32px;
+  border: none;
+  background: #f1f0f0;
+  font-family: "Rubik", sans-serif;
+  color: #909090;
+  cursor: pointer;
+}
+
+.filterIcon {
+  width: 16px;
+  height: 16px;
+  /* padding: 12px 24px; */
+}
+
+.filterText {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/* Дії користувача */
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #909090;
+  font-family: "Rubik", sans-serif;
+  border-radius: 300px;
+  padding: 16px;
+  background: #f1f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.iconImage {
+  width: 16px;
+  height: 22px;
+}
+
+.iconText {
+  display: inline;
+}
+
+.icon_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 300px;
+  padding: 16px;
+  width: 56px;
+  height: 56px;
+  background: #f1f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.iconImage_2 {
+  width: 22px;
+  height: 20px;
+}
+
+/* Кошик */
+.cart {
+  position: relative;
+  background: #f1f0f0;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 300px;
+}
+
+.cartIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #1e1e1e;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Навігація */
+.navLinks {
+  display: flex;
+  gap: 11px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  width: 100%;
+  justify-content: center;
+}
+
+.navLink {
+  font-weight: 300;
+  font-size: 18px;
+  /* color: #000; */
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 8px;
+  background-color: transparent;
+}
+
+/* .navLink_one {
+  padding: 8px;
+  width: 119px;
+  height: 37px;
+}
+
+.navLink_two {
+  padding: 8px;
+  width: 75px;
+  height: 37px;
+}
+
+.navLink_three {
+  padding: 8px;
+  width: 75px;
+  height: 37px;
+}
+
+.navLink_four {
+  padding: 8px;
+  width: 155px;
+  height: 37px;
+}
+
+.navLink_five {
+  padding: 8px;
+  width: 155px;
+  height: 37px;
+} */
+
+/* Валюта та мова */
+.localeSwitcher {
+  position: absolute;
+  top: 8px;
+  right: 130px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.select {
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
+  color: #292d32;
+  /* border: 1px solid #ccc;
+  border-radius: 6px; */
+  border: none;
+  padding: 6px 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.select option {
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  font-family: "Rubik", sans-serif;
+  padding: 6px 10px;
+}
+
+/* 📱 Мобільна адаптація */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 24px;
+    gap: 24px;
+  }
+
+  .logo {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .searchBlock {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .filter {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .userActions {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .iconText,
+  .filterText {
+    font-size: 14px;
+  }
+
+  .localeSwitcher {
+    position: static;
+    margin-bottom: 16px;
+    justify-content: flex-end;
+  }
+
+  .select {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .cart {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cartIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 2px 5px;
+  }
+}
