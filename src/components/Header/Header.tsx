@@ -6,7 +6,6 @@ import filterIcon from './FilterIcon.svg';
 import userIcon from './UserIcon.svg';
 import cabinetIcon from './CabinetIcon.svg';
 import cartIcon from './CartIcon.svg';
-import '../../global.css';
 
 const Header: React.FC = () => {
   return (

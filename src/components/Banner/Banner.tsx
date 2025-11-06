@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Banner.module.css";
 import AI_Chat_Bot from "./AI_Chat_Bot.svg";
 import shopIcon from "./shopIcon.svg";
-import '../../global.css';
 import diagonalLine from "./diagonalLine.svg";
 import diagonalLine_two from "./diagonalLine_two.svg";
 

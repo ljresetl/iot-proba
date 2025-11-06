@@ -4,10 +4,11 @@
 }
 
 .header {
-  padding: 10px 0 5px 0;
+  padding: 10px 0 6px 0;
 }
 
 .headerContainer {
+  font-family: "Rubik", sans-serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -22,7 +23,6 @@
 
 /* Логотип */
 .logo {
-  font-family: "Rubik", sans-serif;
   font-weight: 800;
   font-size: 36px;
   text-transform: uppercase;
@@ -70,7 +70,6 @@
   padding: 16px 32px;
   border: none;
   background: #f1f0f0;
-  font-family: "Rubik", sans-serif;
   color: #909090;
   cursor: pointer;
 }
@@ -78,7 +77,6 @@
 .filterIcon {
   width: 16px;
   height: 16px;
-  /* padding: 12px 24px; */
 }
 
 .filterText {
@@ -101,7 +99,6 @@
   font-weight: 300;
   font-size: 16px;
   color: #909090;
-  font-family: "Rubik", sans-serif;
   border-radius: 300px;
   padding: 16px;
   background: #f1f0f0;
@@ -180,8 +177,6 @@
 .navLink {
   font-weight: 300;
   font-size: 18px;
-  /* color: #000; */
-  font-family: "Rubik", sans-serif;
   text-decoration: none;
   transition: color 0.3s;
   padding: 8px;
@@ -205,10 +200,7 @@
 .select {
   font-weight: 300;
   font-size: 14px;
-  font-family: "Rubik", sans-serif;
   color: #292d32;
-  /* border: 1px solid #ccc;
-  border-radius: 6px; */
   border: none;
   padding: 6px 10px;
   background-color: transparent;
@@ -219,6 +211,5 @@
   font-weight: 300;
   font-size: 16px;
   color: #000;
-  font-family: "Rubik", sans-serif;
   padding: 6px 10px;
 }

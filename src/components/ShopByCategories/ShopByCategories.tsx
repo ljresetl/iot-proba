@@ -1,45 +1,62 @@
+import React, { useRef } from "react";
 import styles from "./ShopByCategories.module.css";
+import shopIcon from "./shopIcon.svg";
+import ArrowLeftIcon from "./svg/left.svg";
+import ArrowRightIcon from "./svg/rigth.svg";
+
 
 const categories = [
-  {
-    id: 1,
-    name: "Electronics",
-    icon: "/icons/electronics.png",
-  },
-  {
-    id: 2,
-    name: "Fashion",
-    icon: "/icons/fashion.png",
-  },
-  {
-    id: 3,
-    name: "Home & Garden",
-    icon: "/icons/home-garden.png",
-  },
-  {
-    id: 4,
-    name: "Sports",
-    icon: "/icons/sports.png",
-  },
+  "Smart home",
+  "Wearables",
+  "Sensors",
+  "Security",
+  "Lighting",
+  "Energy",
+  "Health",
+  "Robotics"
 ];
 
-const ShopByCategories = () => {
-  return (
-    <section className={styles.section}>
-      <h2 className={styles.heading}>Shop by Categories</h2>
+const ShopByCategories: React.FC = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
 
-      <div className={styles.carousel}>
-        {categories.map((category) => (
-          <div key={category.id} className={styles.card}>
-            <div className={styles.image}>
-              <img src={category.icon} alt={category.name} />
-            </div>
-            <div className={styles.label}>
-              {category.name}
-              <span className={styles.arrow}>→</span>
-            </div>
+  const scrollLeft = () => {
+    carouselRef.current?.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    carouselRef.current?.scrollBy({ left: 300, behavior: "smooth" });
+  };
+
+  return (
+    <section className={styles.categories}>
+      <div className={styles.container_categories}>
+        <h2 className={styles.heading}>Shop by Categories</h2>
+
+        <div className={styles.carouselWrapper}>
+
+          <div className={styles.carousel} ref={carouselRef}>
+            {categories.map((category, index) => (
+              <div className={styles.card} key={index}>
+                <div className={styles.image}>
+                  <img
+                    src={`/src/components/ShopByCategories/foto/foto.png`}
+                    alt={category}
+                  />
+                </div>
+                <div className={styles.p_b}>
+                  <p className={styles.categoryName}>{category}</p>
+                  <button className={styles.shopButton}>
+                    <img src={shopIcon} alt="Shop icon" className={styles.shopIcon} />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+
+          <button className={styles.arrowLeft} onClick={scrollLeft}><img src={ArrowLeftIcon} alt="Left arrow" /></button>
+
+          <button className={styles.arrowRight} onClick={scrollRight}><img src={ArrowRightIcon} alt="Right arrow" /></button>
+        </div>
       </div>
     </section>
   );
